@@ -2,9 +2,9 @@
 <main class="servicos container">
     {% for post in site.posts %}
     <article class="servico bg-white radius">
-        <a href="{{ post.url }}"><img src="{{ post.thumb }}" alt="{{ post.thumbalt }}"></a>
+        <a href="{{ post.url | rellative_url }}"><img src="{{ post.thumb | rellative_url}}" alt="{{ post.thumbalt | rellative_url }}"></a>
         <div class="inner">
-            <a href="{{ post.url }}"> {{ post.title }} </a>
+            <a href="{{ post.url | rellative_url }}"> {{ post.title }} </a>
             <p>{{ post.description }}</p>
         </div>
     </article>
